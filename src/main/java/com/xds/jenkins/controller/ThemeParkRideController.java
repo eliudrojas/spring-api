@@ -26,8 +26,8 @@ public class ThemeParkRideController {
     }
 
     @GetMapping(value = "/ride/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ThemeParkRide getRide(@PathVariable long id){
-        return themeParkRideRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Invalid ride id %s", id)));
+    public ThemeParkRide getRide(@PathVariable int id){
+        return themeParkRideRepository.findById(Long.valueOf(id)).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, String.format("Invalid ride id %s", id)));
     }
 
     @PostMapping(value = "/ride", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)

@@ -21,7 +21,7 @@ import javax.validation.constraints.NotEmpty;
 public class ThemeParkRide {
     @Id
     @GeneratedValue (strategy = GenerationType.AUTO)
-    private  int id;
+    private  Long id;
 
     @NotEmpty
     private String name;
@@ -31,7 +31,7 @@ public class ThemeParkRide {
     private int thrillFactor;
     private int vomitFactor;
 
-    public ThemeParkRide(int id, String name, String description, int thrillFactor, int vomitFactor) {
+    public ThemeParkRide(Long id, String name, String description, int thrillFactor, int vomitFactor) {
         this.id = id;
         this.name = name;
         this.description = description;

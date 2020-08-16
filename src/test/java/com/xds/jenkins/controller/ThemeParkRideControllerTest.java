@@ -1,6 +1,7 @@
 package com.xds.jenkins.controller;
 
 
+import com.xds.jenkins.demo.DemoApplication;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest (classes = DemoApplication.class)
 @AutoConfigureMockMvc
 class ThemeParkRideControllerTest {
 
